@@ -1,0 +1,47 @@
+<form id="sisowideal_payment" class="form-horizontal">
+  <fieldset>
+    <legend><img src="https://www.sisow.nl/Sisow/images/ideal/idealklein.gif" alt="iDEAL" title="iDEAL" /></legend>
+    <div class="form-group required">
+      <label class="col-sm-2 control-label" for="input-sisowideal-issuer">{{ text_bank }}</label>
+      <div class="col-sm-10">
+		<select id="input-sisowideal-issuer" name="sisowbank" class="form-control">
+			<option value="">Kies uw bank...</option>
+			{% for issuerid,name in banks %}
+				<option value="{{issuerid}}">{{name}}</option>
+			{% endfor %}
+		</select>
+      </div>
+    </div>
+  </fieldset>
+</form>
+<div class="buttons">
+  <div class="pull-right">
+    <input type="button" value="{{ button_confirm }}" id="sisowideal_confirm" class="btn btn-primary" />
+  </div>
+</div>
+<script type="text/javascript"><!--
+$('#sisowideal_confirm').on('click', function() {
+	$.ajax({ 
+		type: 'POST',
+		url: 'index.php?route=extension/payment/sisowideal/redirectbank',
+		data: $('#sisowideal_payment :input'),
+		dataType: 'json',
+		cache: false,
+		beforeSend: function() {
+			$('#sisowideal_confirm').button('loading');
+		},
+		complete: function() {
+			$('#sisowideal_confirm').button('reset');
+		},		
+		success: function(json) {
+			if (json['error']) {
+				alert(json['error']);
+			}
+			
+			if (json['redirect']) {
+				location = json['redirect'];
+			}
+		}		
+	});
+});
+//--></script>

@@ -1,0 +1,35 @@
+<!--<h2><?php echo $text_header; ?></h2>-->
+<div id="sisowklarna_payment" class="checkout-content">
+  <img src="https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg" height="75px;"/>
+  <input type="hidden" name="payment" value="sisow"/>
+</div>
+<div class="buttons pull-right">
+  <input type="button" value="{{ button_confirm }}" id="sisowklarna_confirm" class="btn btn-primary" />
+</div>
+
+<script type="text/javascript"><!--
+$('#sisowklarna_confirm').on('click', function() {
+	$.ajax({ 
+		type: 'POST',
+		url: 'index.php?route=extension/payment/sisowklarna/redirectbank',
+		data: $('#sisowklarna_payment :input'),
+		dataType: 'json',
+		cache: false,
+		beforeSend: function() {
+			$('#sisowklarna_confirm').button('loading');
+		},
+		complete: function() {
+			$('#sisowklarna_confirm').button('reset');
+		},		
+		success: function(json) {
+			if (json['error']) {
+				alert(json['error']);
+			}
+			
+			if (json['redirect']) {
+				location = json['redirect'];
+			}
+		}		
+	});
+});
+//--></script> 
