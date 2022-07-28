@@ -2,7 +2,7 @@
   <img src="https://www.buckaroo.nl/media/3591/sisow_opencart.png" width="200px" position="center">
 </p>
 
-# Buckaroo OpenCart 3 Payments Plugin (former Sisow)
+# Buckaroo OpenCart 3.x Payments Plugin (former Sisow)
 
 ### Index
 - [About](#about)
