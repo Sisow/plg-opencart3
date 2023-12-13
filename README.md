@@ -15,7 +15,7 @@
 OpenCart is an online store management system. It is PHP-based, using a MySQL database and HTML components.
 The Buckaroo Payments Plugin for OpenCart enables a ready-to-sell payment gateway. You can choose from popular online payment methods in The Netherlands, Belgium, France, Germany and globally. Start accepting payments within a few minutes.
 
-**Please note:** Buckaroo took over Sisow in 2021 and thereby all of their plugins. This OpenCart plugin has been build by Sisow but it contains a ready-to-sell payment gateway for Buckaroo.
+**Please note:** Buckaroo acquired Sisow in 2021 and thereby all of their plugins. This OpenCart plugin has been build by Sisow but it contains a ready-to-sell payment gateway for Buckaroo.
 
 For more information about the former Sisow plugin and the migration, please visit:
 https://www.buckaroo.nl/sisow
