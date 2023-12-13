@@ -32,7 +32,7 @@ $_['heading_title_sisowspraypay']	= 'Spraypay';
 $_['text_payment']			= 'Payment';
 $_['text_success']			= 'Success: your configuration has changed';
 $_['text_all_zones']		= 'All Zones';
-$_['text_sisow']			= '<a onclick="window.open(\'http://www.buckaroo.nl\');"><img src="view/image/payment/buckaroo.png" alt="Buckaroo" title="Buckaroo" style="border: 1px solid #EEEEEE;" /></a>';
+$_['text_sisow']			= '<a onclick="window.open(\'http://www.buckaroo.nl\');"><img src="view/image/payment/buckarooklein.png" alt="Buckaroo" title="Buckaroo" style="border: 1px solid #EEEEEE;" /></a>';
 $_['text_sisowideal']		= $_['text_sisow'];
 $_['text_sisowmc']			= $_['text_sisow'];
 $_['text_sisowde']			= $_['text_sisow'];
